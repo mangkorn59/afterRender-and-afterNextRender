@@ -1,0 +1,94 @@
+<div class="game">
+    <div style="margin-right: 50px; margin-top: 50px;">
+        <div class="input">
+            <div>
+                <input maxlength="1" [value]="this.randomNumber" disabled>
+            </div>
+            <h2> + </h2>
+            <div>
+                <input maxlength="2" #numberInput [disabled]="this.btnDisabled">
+            </div>
+            <h2> = </h2>
+            <div>
+                <input maxlength="2" [value]="this.randomResultNumber" disabled>
+            </div>
+        </div>
+        <div style="display: flex; align-items: center; margin-top: 50px;">
+            <div class="score">
+                <div>
+                    <h2>Score</h2>
+                </div>
+                <div style="display: flex;">
+                    <div [ngClass]="[this.score < -4 ? 'redScore' : 'zeroScore']">&nbsp;</div>
+                    <div [ngClass]="[this.score < -3 ? 'redScore' : 'zeroScore']">&nbsp;</div>
+                    <div [ngClass]="[this.score < -2 ? 'redScore' : 'zeroScore']">&nbsp;</div>
+                    <div [ngClass]="[this.score < -1 ? 'redScore' : 'zeroScore']">&nbsp;</div>
+                    <div [ngClass]="[this.score < 0 ? 'redScore' : 'zeroScore']">&nbsp;</div>
+                    <div [ngClass]="[this.score > 0 ? 'greenScore' : 'zeroScore']">&nbsp;</div>
+                    <div [ngClass]="[this.score > 1 ? 'greenScore' : 'zeroScore']">&nbsp;</div>
+                    <div [ngClass]="[this.score > 2 ? 'greenScore' : 'zeroScore']">&nbsp;</div>
+                    <div [ngClass]="[this.score > 3 ? 'greenScore' : 'zeroScore']">&nbsp;</div>
+                    <div [ngClass]="[this.score > 4 ? 'greenScore' : 'zeroScore']">&nbsp;</div>
+                </div>
+            </div>
+            <div style="display: flex; ">
+                <button class="submit" (click)="submit()" [disabled]="this.btnDisabled"><b>SUBMIT</b></button>
+            </div>
+        </div>
+    </div>
+    <div class="playCountLayout">
+        <h3>Play Count</h3>
+        <div
+            style="display: flex; flex-direction: column; border-radius: 5px; box-shadow: 0px 1px 5px #0000004e; padding: 10px;">
+            <div [ngClass]="[this.playCount > 9 ? 'playCount' : 'zeroPlayCount']">&nbsp;</div>
+            <div [ngClass]="[this.playCount > 8 ? 'playCount' : 'zeroPlayCount']">&nbsp;</div>
+            <div [ngClass]="[this.playCount > 7 ? 'playCount' : 'zeroPlayCount']">&nbsp;</div>
+            <div [ngClass]="[this.playCount > 6 ? 'playCount' : 'zeroPlayCount']">&nbsp;</div>
+            <div [ngClass]="[this.playCount > 5 ? 'playCount' : 'zeroPlayCount']">&nbsp;</div>
+            <div [ngClass]="[this.playCount > 4 ? 'playCount' : 'zeroPlayCount']">&nbsp;</div>
+            <div [ngClass]="[this.playCount > 3 ? 'playCount' : 'zeroPlayCount']">&nbsp;</div>
+            <div [ngClass]="[this.playCount > 2 ? 'playCount' : 'zeroPlayCount']">&nbsp;</div>
+            <div [ngClass]="[this.playCount > 1 ? 'playCount' : 'zeroPlayCount']">&nbsp;</div>
+            <div [ngClass]="[this.playCount > 0 ? 'playCount' : 'zeroPlayCount']">&nbsp;</div>
+        </div>
+    </div>
+    <div id="bgResult" class="result">
+        <h2>RESULT</h2>
+        <div style="display: flex; align-items: center;">
+            <p class="resultWord">อัตราการตอบถูก</p>
+            <div style="width: 70%;">
+                <div id="correctRateBar" style="background-color: #009678; border-radius: 3px; ">&nbsp;
+                </div>
+            </div>
+            <p class="resultScore">{{this.correctRate}}%</p>
+        </div>
+        <div style="display: flex; align-items: center;">
+            <p class="resultWord">อัตราการตอบผิด</p>
+            <div style="width: 70%;">
+                <div id="incorrectRateBar" style="background-color: #BE002E; border-radius: 3px; ">&nbsp;
+                </div>
+            </div>
+            <p class="resultScore">{{this.incorrectRate}}%</p>
+        </div>
+        <div style="display: flex; align-items: center;">
+            <p class="resultWord">จำนวนครั้งในการเล่น</p>
+            <div style="width: 70%;">
+                <div id="playingRateBar" style="background-color: #EECA00; border-radius: 3px; ">&nbsp;
+                </div>
+            </div>
+            <p class="resultScore">{{this.playingRate}}</p>
+        </div>
+        <div style="display: flex; align-items: center;">
+            <p class="resultWord">คะแนนของคุณที่ได้</p>
+            <div style="width: 70%;">
+                <div id="resultScoreBar" style="background-color: #4D92FF; border-radius: 3px; ">&nbsp;
+                </div>
+            </div>
+            <p class="resultScore">{{this.resultScore}}%</p>
+        </div>
+        <div style="display: flex; justify-content: space-between;">
+            <div></div>
+            <button class="clear" (click)="clear()"><b>RESTART GAME</b></button>
+        </div>
+    </div>
+</div>

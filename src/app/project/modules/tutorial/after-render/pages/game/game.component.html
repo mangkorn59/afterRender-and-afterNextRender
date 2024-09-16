@@ -1,0 +1,27 @@
+<div style="color: #223B62;">
+    <h1>Addition game for afterRender and afterNextRender</h1>
+    <b>Application overview</b>
+    <ul>
+        <li>ตอบคำถามคณิตพื้นฐาน</li>
+        <li>ถ้าตอบถูกจะบวกคะแนน 1</li>
+        <li>ถ้าตอบผิดจะลบคะแนน 1</li>
+        <li>ถ้าคะแนนสีเขียวหรือสีแดงคือ 5 เกมจะจบ</li>
+        <li>สามารถดเล่นได้ 10 ครั้งถ้าครบ 10</li>
+    </ul>
+</div>
+<div style="display: flex; align-items: center;">
+    <button class="clear" (click)="this.letsPlayGame()"><b>{{ gamePlay ? 'GAME RESET' : 'GAME START' }}</b></button>
+    <div>
+        <input type="radio" id="style1" name="gameStyle" value="style1">
+        <label for="style1">style1</label>
+
+        <input type="radio" id="style2" name="gameStyle" value="style2">
+        <label for="style2">style2</label>
+
+        <input type="radio" id="style3" name="gameStyle" value="style3">
+        <label for="style3">style3</label>
+    </div>
+</div>
+
+
+<app-game-play *ngIf="this.gamePlay" [selectedStyle]="this.selectedStyle"></app-game-play>

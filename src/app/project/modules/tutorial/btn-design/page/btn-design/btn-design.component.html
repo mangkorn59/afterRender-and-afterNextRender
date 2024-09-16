@@ -1,0 +1,31 @@
+<div>
+    <div>
+        <h3>Text</h3>
+        <input [(ngModel)]="this.label">
+        <div class="font-weight-options">
+            <input type="radio" id="normal" name="fontWeight" [(ngModel)]="fontWeight" value="normal">
+            <label for="normal">Normal</label>
+
+            <input type="radio" id="lighter" name="fontWeight" [(ngModel)]="fontWeight" value="lighter">
+            <label for="lighter">Lighter</label>
+
+            <input type="radio" id="bold" name="fontWeight" [(ngModel)]="fontWeight" value="bold">
+            <label for="bold">Bold</label>
+            <input type="number" [(ngModel)]="fontWeight" placeholder="">
+        </div>
+        <div>
+            <input type="color" [(ngModel)]="fontColor">
+        </div>
+        <div>
+            <input type="color" [(ngModel)]="backgroundColor">
+        </div>
+        <!-- <div>
+            <div>
+                <input type="color" [(ngModel)]="backgroundColor">
+            </div>
+        </div> -->
+    </div>
+</div>
+<div>
+    <button #customBtn >{{this.label}}</button>
+</div>

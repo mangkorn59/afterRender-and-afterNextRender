@@ -1,0 +1,26 @@
+<!-- <app-c11 style="width: 50%;"></app-c11> -->
+<!-- <app-c12></app-c12> -->
+<div [ngClass]="this.sizeWidth">
+    <!-- &nbsp; -->
+    {{this.sizeWidth}}
+</div>
+<div>
+    <button (click)="changeSizeWidth('50')">width 10%</button>
+    <button (click)="changeSizeWidth('500')">width 20%</button>
+    <button (click)="changeSizeWidth('5000')">width 30%</button>
+</div>
+<div>
+    <input [(ngModel)]="this.numberValue1" type="number" min="0" max="100" maxlength="3">
+    <input [(ngModel)]="this.numberValue2">
+</div>
+<div>
+    {{this.numberValue1}}
+    {{this.numberValue2}}
+    {{this.numberValue3}}
+</div>
+<div #myDiv class="my-div">
+   ขนาดพื้นที่ {{this.numberValue3}} px
+</div>
+<div class="point">
+    &nbsp;
+</div>

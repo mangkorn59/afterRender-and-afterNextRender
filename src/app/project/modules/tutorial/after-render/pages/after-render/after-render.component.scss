@@ -1,0 +1,25 @@
+.Width10{
+    background-color: aquamarine;
+    width: 10%;
+}
+.Width20{
+    background-color: aquamarine;
+    width: 20%;
+}
+.Width30{
+    background-color: aquamarine;
+    width: 30%;
+}
+.my-div{
+    background-color: aquamarine;
+    width: 30%;
+}
+.point{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    position: absolute;
+    background: red;
+    transition: 0.15s ease-out;
+    z-index: 10;
+}

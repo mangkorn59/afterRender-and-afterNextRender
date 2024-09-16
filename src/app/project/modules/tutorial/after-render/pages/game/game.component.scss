@@ -1,0 +1,26 @@
+h1 {
+    color: #CA103D;
+}
+
+.clear {
+    font-size: 30px;
+    height: 50px;
+    background-color: #ffffff;
+    color: #223B62;
+    border: 0;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0px 1px 5px #0000004e;
+}
+
+.clear:active {
+    background-color: #b8b8b8;
+}
+
+.clear:disabled {
+    background-color: #d3d3d3;
+    color: #a9a9a9;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
